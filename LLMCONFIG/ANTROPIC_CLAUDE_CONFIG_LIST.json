@@ -1,0 +1,35 @@
+[
+    {
+        "model": "claude-3-5-sonnet-20240620",
+        "api_key": "your Anthropic API Key goes here",
+        "api_type": "anthropic"
+    },
+    {
+        "model": "claude-3-sonnet-20240229",
+        "api_key": "your Anthropic API Key goes here",
+        "api_type": "anthropic",
+        "temperature": 0.5,
+        "top_p": 0.2, 
+        "max_tokens": 10000
+    },
+    {
+        "model":"claude-3-opus-20240229",
+        "api_key":"your api key",
+        "api_type":"anthropic"
+    },
+    {
+        "model":"claude-2.0",
+        "api_key":"your api key",
+        "api_type":"anthropic"
+    },
+    {
+        "model":"claude-2.1",
+        "api_key":"your api key",
+        "api_type":"anthropic"
+    },
+    {
+        "model":"claude-3.0-haiku",
+        "api_key":"your api key",
+        "api_type":"anthropic"
+    }
+]

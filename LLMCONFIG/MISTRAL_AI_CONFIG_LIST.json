@@ -1,0 +1,37 @@
+[
+    {
+        "model": "open-mistral-7b",
+        "api_key": "your Mistral AI API Key goes here",
+        "api_type": "mistral"
+    },
+    {
+        "model": "open-mixtral-8x7b",
+        "api_key": "your Mistral AI API Key goes here",
+        "api_type": "mistral"
+    },
+    {
+        "model": "open-mixtral-8x22b",
+        "api_key": "your Mistral AI API Key goes here",
+        "api_type": "mistral"
+    },
+    {
+        "model": "mistral-small-latest",
+        "api_key": "your Mistral AI API Key goes here",
+        "api_type": "mistral"
+    },
+    {
+        "model": "mistral-medium-latest",
+        "api_key": "your Mistral AI API Key goes here",
+        "api_type": "mistral"
+    },
+    {
+        "model": "mistral-large-latest",
+        "api_key": "your Mistral AI API Key goes here",
+        "api_type": "mistral"
+    },
+    {
+        "model": "codestral-latest",
+        "api_key": "your Mistral AI API Key goes here",
+        "api_type": "mistral"
+    }
+]

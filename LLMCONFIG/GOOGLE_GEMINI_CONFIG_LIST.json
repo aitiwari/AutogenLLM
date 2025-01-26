@@ -1,0 +1,37 @@
+[
+    {
+        "model": "gemini-pro",
+        "api_type": "google",
+        "project_id": "autogen-with-gemini",
+        "location": "us-west1"
+    },
+    {
+        "model": "gemini-1.5-pro-001",
+        "api_type": "google",
+        "project_id": "autogen-with-gemini",
+        "location": "us-west1"
+    },
+    {
+        "model": "gemini-1.5-pro",
+        "api_type": "google",
+        "project_id": "autogen-with-gemini",
+        "location": "us-west1",
+        "google_application_credentials": "autogen-with-gemini-service-account-key.json"
+    },
+    {
+        "model": "gemini-pro-vision",
+        "api_type": "google",
+        "project_id": "autogen-with-gemini",
+        "location": "us-west1"
+    },
+    {
+        "model": "gemini-1.5-flash",
+        "api_key": "<REPLACE WITH YOUR GEMINI API KEY>",
+        "api_type": "google"
+   },
+   {
+        "model": "gemini-1.5-pro",
+        "api_key": "<REPLACE WITH YOUR GEMINI API KEY>",
+        "api_type": "google"
+   }
+]
