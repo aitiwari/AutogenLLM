@@ -61,15 +61,6 @@ class Streamlit_UI() :
                 st.write("### Provide OpenAI Configuration Details")
                 selected_model_name = st.text_input("Enter Model Name", value="")
                 st.session_state['api_key'] = st.text_input("Enter API Key", value="", type="password")
-              
-
-                # Display selected configuration
-                st.write("### Selected Configuration")
-                st.write(f"API Type: {api_type}")
-                st.write(f"Model: {selected_model_name}")
-                st.write("User Inputs:")
-                st.json(user_inputs)
-
             else:
                 # Get models based on selected API type
                 selected_models = api_data.get(api_type, [])

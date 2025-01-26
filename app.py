@@ -11,19 +11,9 @@ if __name__ == "__main__":
     
         user_inputs_controls = Streamlit_UI().load_streamlit_ui()
         user_inputs_display = user_inputs_controls
-        # Mask API key in displayed outputs
-        # if "api_key" in user_inputs_controls:
-        #     user_inputs_display["api_key"] = "*****"
-
-        
-        with st.sidebar:
-            # Display selected configuration
-            st.write("User Inputs:")
-            st.json(user_inputs_display)
 
         # Basic usecasse :
-        
-        # userInput
+        # user chat
         problem = st.chat_input("Start Chat")
         if problem : 
             # LLM Configuration
