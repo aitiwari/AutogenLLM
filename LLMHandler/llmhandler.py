@@ -1,4 +1,5 @@
 from LLMS.groqllm import GroqLLM
+from LLMS.oaillm import OAILLM
 
 
 class LLMHandler:
@@ -19,29 +20,29 @@ class LLMHandler:
         obj_llm_config = GroqLLM(user_controls_input=self.user_control)
         llm_config = obj_llm_config.groq_llm_config()
         return llm_config
+    
+    def common_handler(self):
+        obj_llm_config = OAILLM(user_controls_input=self.user_control)
+        obj_llm_config.oai_llm_config()
 
-    # def google_handler(self):
-    #     obj_llm_config = GoogleLLM(user_controls_input=self.user_control)
-    #     obj_llm_config.google_llm_config()
+    def google_handler(self):
+        self.common_handler()
 
-    # def mistral_handler(self):
-    #     obj_llm_config = MistralLLM(user_controls_input=self.user_control)
-    #     obj_llm_config.mistral_llm_config()
+    def mistral_handler(self):
+        self.common_handler()
 
-    # def anthropic_handler(self):
-    #     obj_llm_config = AnthropicLLM(user_controls_input=self.user_control)
-    #     obj_llm_config.anthropic_llm_config()
+    def anthropic_handler(self):
+        self.common_handler()
 
-    # def bedrock_handler(self):
-    #     obj_llm_config = BedrockLLM(user_controls_input=self.user_control)
-    #     obj_llm_config.bedrock_llm_config()
+    def bedrock_handler(self):
+        self.common_handler()
 
-    # def ollama_handler(self):
-    #     obj_llm_config = OllamaLLM(user_controls_input=self.user_control)
-    #     obj_llm_config.ollama_llm_config()
-
-    # def openai_handler(self):
-    #     obj_llm_config = OpenAILLM(user_controls_input=self.user_control)
-    #     obj_llm_config.openai_llm_config()
+    def ollama_handler(self):
+        self.common_handler()
+    def together_handler(self):
+        self.common_handler()
+    
+    def openai_handler(self):
+        self.common_handler()
 
 

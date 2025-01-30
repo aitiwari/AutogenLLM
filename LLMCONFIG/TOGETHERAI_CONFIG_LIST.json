@@ -1,0 +1,23 @@
+[
+
+    {
+        "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "api_key": "your Together.AI API Key goes here",
+        "api_type": "together"
+    },
+    {
+        "model": "codellama/CodeLlama-70b-Instruct-hf",
+        "api_key": "your Together.AI API Key goes here",
+        "api_type": "together"
+    },
+    {
+        "model": "meta-llama/Llama-2-13b-chat-hf",
+        "api_key": "your Together.AI API Key goes here",
+        "api_type": "together"
+    },
+    {
+        "model": "Qwen/Qwen2-72B-Instruct",
+        "api_key": "your Together.AI API Key goes here",
+        "api_type": "together"
+    }
+]
