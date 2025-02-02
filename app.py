@@ -2,6 +2,7 @@
 import streamlit as st
 from streamlitui.loadui import Streamlit_UI
 from usecases.basicexample import BasicExample
+from usecases.basicexamplecustommodel import BasicExampleCustomModel
 from LLMS.llmconfig import LLMConfig
 
 # MAIN Function START
@@ -20,7 +21,19 @@ if __name__ == "__main__":
             LLMConfig(user_inputs_controls).get_llm_config()
             if 'config_list' in st.session_state['llm_config'] : 
                 llm_config = st.session_state['llm_config']
-            obj_basic_example = BasicExample(assistant_name="Assistant", user_proxy_name='Userproxy',
+            
+            # for custom moddel condition     
+            if user_inputs_controls['api_type']== "huggingface":
+                with st.chat_message('user'):
+                    st.write(problem)
+                obj_basic_example_custom = BasicExampleCustomModel(assistant_name="Assistant", user_proxy_name='Userproxy',
                                                         llm_config=llm_config,
                                                         problem=problem)
-            obj_basic_example.run()
+                obj_basic_example_custom.run()
+            
+            else :
+                    
+                obj_basic_example = BasicExample(assistant_name="Assistant", user_proxy_name='Userproxy',
+                                                            llm_config=llm_config,
+                                                            problem=problem)
+                obj_basic_example.run()

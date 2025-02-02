@@ -27,6 +27,7 @@ class Streamlit_UI() :
         groq_file = "./LLMCONFIG/GROQ_CONFIG_LIST.json"
         bedrock_file = "./LLMCONFIG/BEDROCK_CONFIG_LIST.json"
         togetherai_file = "./LLMCONFIG/TOGETHERAI_CONFIG_LIST.json"
+        
 
         # Load model configurations
         anthropic_models = self.load_json(anthropic_file)
@@ -39,6 +40,7 @@ class Streamlit_UI() :
 
         # Combine all API types into a single dictionary
         api_data = {
+            "huggingface": [],
             "groq": groq_models,
             "together":togetherai_models,
             "openai": [],
@@ -49,6 +51,7 @@ class Streamlit_UI() :
             "google": google_models
         }
         user_inputs = {}
+        selected_model_name = ''
         st.set_page_config(page_title= "AUTOGEN ~ 0.2", layout="wide",page_icon='🤖')
         st.header("🤖 " + "AUTOGEN ~ 0.2")
         with st.sidebar:
@@ -64,6 +67,20 @@ class Streamlit_UI() :
                 st.write("### Provide OpenAI Configuration Details")
                 selected_model_name = st.text_input("Enter Model Name", value="")
                 st.session_state['api_key'] = st.text_input("Enter API Key", value="", type="password")
+                
+            elif api_type == "huggingface":
+                hf_api_key = st.session_state['api_key'] = st.text_input("Enter HF API Key", value="", type="password")
+                modeloptions = ["mistralai/Mixtral-8x7B-Instruct-v0.1"]
+                if hf_api_key:
+                     if st.checkbox("Select Model from list : ",True):
+                         selected_model_name = st.selectbox("",modeloptions)
+                     else :
+                         selected_model_name = st.text_input("Enter Model Name", value="")
+                else: 
+                     st.warning("Please enter your Hugging Face API Key to proceed.")
+                     st.link_button("How to get Huggingface API KEY","https://huggingface.co/docs/hub/security-tokens#what-are-user-access-tokens")
+                
+                
             else:
                 # Get models based on selected API type
                 selected_models = api_data.get(api_type, [])

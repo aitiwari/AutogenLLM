@@ -2,3 +2,4 @@
 /.cache
 *.ipynb
 *.pyc
+/autogen_cache/42
